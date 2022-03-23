@@ -4,6 +4,11 @@ import Home from './components/Home';
 
 import AboutUs from './components/AboutUs';
 import { ContactUs } from './components/ContactUs';
+import { Link, Route, Router, Routes } from 'react-router-dom';
+import { Movies } from './components/Movies';
+import { MovieDetail } from './components/MovieDetail';
+import { MainMenu } from './components/MainMenu';
+
 
 
 function App() {
@@ -52,29 +57,43 @@ function App() {
   
   // console.log(name)
 
-  var ContactPersons = [
-    {
-      name : "Yaksh",
-      age : 20,
-      contactNo : 123456789
-    },
-    {
-      name : "Vidit",
-      age : 20,
-      contactNo : 987654321
-    },
-    {
-      name : "Vraj",
-      age : 22,
-      contactNo : 5687453543
-    }
+  // var ContactPersons = [
+  //   {
+  //     name : "Yaksh",
+  //     age : 20,
+  //     contactNo : 123456789
+  //   },
+  //   {
+  //     name : "Vidit",
+  //     age : 20,
+  //     contactNo : 987654321
+  //   },
+  //   {
+  //     name : "Vraj",
+  //     age : 22,
+  //     contactNo : 5687453543
+  //   }
 
-  ]
-  var x = 100
-  var homeName = "Yaksh"
+  // ]
+  // var x = 100
+  // var homeName = "Yaksh"
   return (
     <div className="App">
-      {/* <h1>Bye World</h1>
+      {<div>
+        <MainMenu/>
+        
+        
+      
+      <Routes>
+        <Route path='/Movies' element={<Movies/>}/>
+        <Route path='/Movies/MoviesDetail/:name' element={<MovieDetail/>}/>
+      </Routes>
+      </div>
+      
+      
+      
+      
+      /* <h1>Bye World</h1>
       <h2>{c}</h2>
       <h2>Salary is  : {salary}</h2>
       <h2>{name}</h2>
@@ -106,14 +125,14 @@ function App() {
         
     </div> */
     
-    <div>
-      <h1>Main APP component</h1>
-    <Home homeName={homeName} />
+    // <div>
+    //   <h1>Main APP component</h1>
+    // <Home homeName={homeName} />
 
-    <ContactUs contactPersons = {ContactPersons} x ={x}/>
-    <AboutUs/>
+    // <ContactUs contactPersons = {ContactPersons} x ={x}/>
+    // <AboutUs/>
 
-    </div>
+    // </div>
     
     
     }
