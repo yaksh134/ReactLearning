@@ -8,6 +8,8 @@ import { Link, Route, Router, Routes } from 'react-router-dom';
 import { Movies } from './components/Movies';
 import { MovieDetail } from './components/MovieDetail';
 import { MainMenu } from './components/MainMenu';
+import { AddEmployees} from './components/AddEmployees';
+
 
 
 
@@ -80,14 +82,15 @@ function App() {
   return (
     <div className="App">
       {<div>
-        <MainMenu/>
+        <AddEmployees/>
+        {/* <MainMenu/> */}
         
         
       
-      <Routes>
+      {/* <Routes>
         <Route path='/Movies' element={<Movies/>}/>
         <Route path='/Movies/MoviesDetail/:name' element={<MovieDetail/>}/>
-      </Routes>
+      </Routes> */}
       </div>
       
       
