@@ -13,6 +13,7 @@ import { EmployeeDetails } from './EmployeeDetails';
 import { AddTicket } from './components/AddTicket';
 import { useState} from 'react';
 import { ListTicket } from './components/ListTicket';
+import { SimpleForm } from './components/SimpleForm';
 
 
 
@@ -106,9 +107,11 @@ function App() {
     <div className="App">
       {<div>
 
-        <AddTicket addTicket = {addTicket}/>
+        <SimpleForm/>
 
-        <ListTicket tickets = {tickets} deleteTicket = {deleteTicket}/>
+        {/* <AddTicket addTicket = {addTicket}/>
+
+        <ListTicket tickets = {tickets} deleteTicket = {deleteTicket}/> */}
         {/* <AddEmployees/> */}
         {/* <MainMenu/> */}
         
