@@ -9,6 +9,10 @@ import { Movies } from './components/Movies';
 import { MovieDetail } from './components/MovieDetail';
 import { MainMenu } from './components/MainMenu';
 import { AddEmployees} from './components/AddEmployees';
+import { EmployeeDetails } from './EmployeeDetails';
+import { AddTicket } from './components/AddTicket';
+import { useState} from 'react';
+import { ListTicket } from './components/ListTicket';
 
 
 
@@ -79,19 +83,46 @@ function App() {
   // ]
   // var x = 100
   // var homeName = "Yaksh"
+
+  const [tickets, settickets] = useState([
+    {
+      name : "Login Bug",
+      description : "solve the login bug for premium users"
+    },
+    {
+      name : "Logout Bug",
+      description : "Solve the logout bug for free users"
+    }
+  ])
+
+  const deleteTicket = (ticket)=>{
+    settickets(tickets.filter(t => t.name !== ticket.name))
+  }
+
+  const addTicket = (ticket)=>{
+    settickets([...tickets,ticket])
+  }
   return (
     <div className="App">
       {<div>
-        <AddEmployees/>
+
+        <AddTicket addTicket = {addTicket}/>
+
+        <ListTicket tickets = {tickets} deleteTicket = {deleteTicket}/>
+        {/* <AddEmployees/> */}
         {/* <MainMenu/> */}
         
-        
+        {/* <Routes>
+          <Route path='/employeedetails/:id' element={<EmployeeDetails/>}/>
+        </Routes> */}
       
       {/* <Routes>
         <Route path='/Movies' element={<Movies/>}/>
         <Route path='/Movies/MoviesDetail/:name' element={<MovieDetail/>}/>
       </Routes> */}
       </div>
+
+     
       
       
       
