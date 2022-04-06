@@ -14,6 +14,7 @@ import { AddTicket } from './components/AddTicket';
 import { useState} from 'react';
 import { ListTicket } from './components/ListTicket';
 import { SimpleForm } from './components/SimpleForm';
+import { SimpleFormCustomHook } from './components/SimpleFormCustomHook';
 
 
 
@@ -107,7 +108,8 @@ function App() {
     <div className="App">
       {<div>
 
-        <SimpleForm/>
+        {/* <SimpleForm/> */}
+        <SimpleFormCustomHook/>
 
         {/* <AddTicket addTicket = {addTicket}/>
 
