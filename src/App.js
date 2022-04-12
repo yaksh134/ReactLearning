@@ -16,6 +16,8 @@ import { ListTicket } from './components/ListTicket';
 import { SimpleForm } from './components/SimpleForm';
 import { SimpleFormCustomHook } from './components/SimpleFormCustomHook';
 import { UsersApi } from './components/UsersApi';
+import { GetProducts } from './components/api/GetProducts';
+import { AddProduct } from './components/api/AddProduct';
 
 
 
@@ -111,7 +113,9 @@ function App() {
 
         {/* <SimpleForm/> */}
         {/* <SimpleFormCustomHook/> */}
-        <UsersApi/>
+        {/* <UsersApi/> */}
+        <AddProduct/>
+        <GetProducts/>
 
         {/* <AddTicket addTicket = {addTicket}/>
 
