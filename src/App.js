@@ -18,6 +18,11 @@ import { SimpleFormCustomHook } from './components/SimpleFormCustomHook';
 import { UsersApi } from './components/UsersApi';
 import { GetProducts } from './components/api/GetProducts';
 import { AddProduct } from './components/api/AddProduct';
+import { UpdateProduct } from './components/api/UpdateProduct';
+import { GetMovies } from './components/api/GetMovies';
+import { AddMovies } from './components/api/AddMovies';
+import { UpdateMovie } from './components/api/UpdateMovie';
+import axios from 'axios';
 
 
 
@@ -89,6 +94,17 @@ function App() {
   // var x = 100
   // var homeName = "Yaksh"
 
+//   const [movies, setmovies] = useState([])
+
+//   const allMovies = () =>{
+//     axios.get("https://primeflixapis.herokuapp.com/api/getMovies",{
+//         headers : {'token':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNWMxN2VhZTIyZDVlODUxOGJhNzY1ZiIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NTAyMDI2NzIsImV4cCI6MTY1MDQ2MTg3Mn0.Xh6g8DfwQhbQUItNZU2iqS7iyseR48yceau5kRdHGtU'}
+//     }).then((res)=>{
+//         console.log(res.data)
+//         setmovies(res.data)
+//     })
+// }
+
   const [tickets, settickets] = useState([
     {
       name : "Login Bug",
@@ -114,8 +130,19 @@ function App() {
         {/* <SimpleForm/> */}
         {/* <SimpleFormCustomHook/> */}
         {/* <UsersApi/> */}
-        <AddProduct/>
-        <GetProducts/>
+        {/* <AddProduct/>
+        <GetProducts/>  */}
+
+        <AddMovies />
+        <GetMovies />
+
+        <Routes>
+          <Route path='/UpdateMovie/:id' element = {<UpdateMovie/>}/>
+        </Routes>
+
+        {/* <Routes>
+          <Route path='/UpdateProduct/:id' element = {<UpdateProduct/>}/>
+        </Routes> */}
 
         {/* <AddTicket addTicket = {addTicket}/>
 
@@ -127,10 +154,10 @@ function App() {
           <Route path='/employeedetails/:id' element={<EmployeeDetails/>}/>
         </Routes> */}
       
-      {/* <Routes>
+       {/* <Routes>
         <Route path='/Movies' element={<Movies/>}/>
         <Route path='/Movies/MoviesDetail/:name' element={<MovieDetail/>}/>
-      </Routes> */}
+      </Routes>  */}
       </div>
 
      
