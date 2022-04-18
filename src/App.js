@@ -23,6 +23,8 @@ import { GetMovies } from './components/api/GetMovies';
 import { AddMovies } from './components/api/AddMovies';
 import { UpdateMovie } from './components/api/UpdateMovie';
 import axios from 'axios';
+import { LocalStorage } from './components/LocalStorage';
+import { FileUpload } from './components/FileUpload';
 
 
 
@@ -133,8 +135,11 @@ function App() {
         {/* <AddProduct/>
         <GetProducts/>  */}
 
-        <AddMovies />
-        <GetMovies />
+        {/* <AddMovies />
+        <GetMovies /> */}
+
+        {/* <LocalStorage/> */}
+        <FileUpload/>
 
         <Routes>
           <Route path='/UpdateMovie/:id' element = {<UpdateMovie/>}/>
