@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 
+
 export const FileUpload = () => {
+
 
     const style = {
         color : "red"
@@ -9,6 +11,9 @@ export const FileUpload = () => {
     const [name, setname] = useState('')
     const [file, setfile] = useState()
     const [multiplefile, setmultiplefile] = useState([])
+
+    const [latitude, setlatitude] = useState('')
+    const [longitude, setlongitude] = useState('')
 
 
     const submit = () =>{
@@ -29,6 +34,8 @@ export const FileUpload = () => {
         navigator.geolocation.getCurrentPosition(position=>{
             console.log("Lattitue is : ",position.coords.latitude)
             console.log("Longitude is : ",position.coords.longitude)
+            setlatitude(position.coords.latitude)
+            setlongitude(position.coords.longitude)
         })
     }   
     
@@ -42,6 +49,11 @@ export const FileUpload = () => {
             <p id='error' style={style}></p>
             <input type= "submit" value = "GET LOCATION" onClick={(e)=>{loc(e)}}/>
         </form>
+
+
+      
     </div>
   )
 }
+
+

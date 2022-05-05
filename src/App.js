@@ -25,6 +25,12 @@ import { UpdateMovie } from './components/api/UpdateMovie';
 import axios from 'axios';
 import { LocalStorage } from './components/LocalStorage';
 import { FileUpload } from './components/FileUpload';
+import { MatrialTable } from './components/MUI/MatrialTable';
+import { Login } from './components/ProtectedRoutes/Login';
+import {List} from './components/ProtectedRoutes/List'
+import { Error404 } from './components/Error404';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { QueryDemo } from './Query/QueryDemo';
 
 
 
@@ -125,6 +131,8 @@ function App() {
   const addTicket = (ticket)=>{
     settickets([...tickets,ticket])
   }
+
+  const queryClient = new QueryClient()
   return (
     <div className="App">
       {<div>
@@ -139,14 +147,26 @@ function App() {
         <GetMovies /> */}
 
         {/* <LocalStorage/> */}
-        <FileUpload/>
-
-        <Routes>
+        {/* <FileUpload/> */}
+        {/* <MatrialTable/> */}
+        {/* <Login/> */}
+        <QueryClientProvider client={queryClient}>
+          <QueryDemo/>
+        </QueryClientProvider>
+        {/* <Routes>
           <Route path='/UpdateMovie/:id' element = {<UpdateMovie/>}/>
-        </Routes>
+          {sessionStorage.getItem('email')!=null?
+          <Route path='/list' element = {<List/>}/>
+          :"/"
+        }
+
+        <Route path='/*' element={<Error404/>}/>
+        <Route path='/' element = {<AboutUs/>}/>
+        </Routes> */}
 
         {/* <Routes>
           <Route path='/UpdateProduct/:id' element = {<UpdateProduct/>}/>
+          
         </Routes> */}
 
         {/* <AddTicket addTicket = {addTicket}/>
@@ -157,9 +177,9 @@ function App() {
         
         {/* <Routes>
           <Route path='/employeedetails/:id' element={<EmployeeDetails/>}/>
-        </Routes> */}
+        </Routes>
       
-       {/* <Routes>
+       <Routes>
         <Route path='/Movies' element={<Movies/>}/>
         <Route path='/Movies/MoviesDetail/:name' element={<MovieDetail/>}/>
       </Routes>  */}
