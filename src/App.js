@@ -31,6 +31,7 @@ import {List} from './components/ProtectedRoutes/List'
 import { Error404 } from './components/Error404';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { QueryDemo } from './Query/QueryDemo';
+import { Loading } from './components/Loading';
 
 
 
@@ -153,6 +154,7 @@ function App() {
         <QueryClientProvider client={queryClient}>
           <QueryDemo/>
         </QueryClientProvider>
+        
         {/* <Routes>
           <Route path='/UpdateMovie/:id' element = {<UpdateMovie/>}/>
           {sessionStorage.getItem('email')!=null?
