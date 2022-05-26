@@ -32,6 +32,9 @@ import { Error404 } from './components/Error404';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { QueryDemo } from './Query/QueryDemo';
 import { Loading } from './components/Loading';
+import { QueryDemo1 } from './Query/QueryDemo1';
+import { QueryDemo2 } from './Query/QueryDemo2';
+import { Weather } from './components/api/Weather';
 
 
 
@@ -147,13 +150,15 @@ function App() {
         {/* <AddMovies />
         <GetMovies /> */}
 
+        <Weather/>
+
         {/* <LocalStorage/> */}
         {/* <FileUpload/> */}
         {/* <MatrialTable/> */}
         {/* <Login/> */}
-        <QueryClientProvider client={queryClient}>
-          <QueryDemo/>
-        </QueryClientProvider>
+
+        
+       
         
         {/* <Routes>
           <Route path='/UpdateMovie/:id' element = {<UpdateMovie/>}/>
