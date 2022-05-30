@@ -40,7 +40,9 @@ export const Weather = () => {
 
     {
         data!==''?
-       "Weather for "+data.name:
+        <span style={{fontWeight: 'bold' ,textDecorationLine : 'underline' , fontSize : '30px'}}>{data.name}</span> 
+    //    "Weather for "+data.name
+    :
         null
     }<hr/>
       {
@@ -50,12 +52,22 @@ export const Weather = () => {
       }<br/>
       {
           data!==''?
-          "Current Temperature : "+((data.main.temp)-273.15).toFixed(2):null
+          "Current Temperature : "+((data.main.temp)-273.15).toFixed(2)+"℃":null
       }<br/>
 
       {
           data!==''?
-          "Feels Like : "+(data.main.feels_like-273.15).toFixed(2):null
+          "Feels Like : "+(data.main.feels_like-273.15).toFixed(2)+"℃":null
+      }<br/>
+
+{
+          data!==''?
+          "Pressure : "+(data.main.pressure)+"bar" :null
+      }<br/>
+
+{
+          data!==''?
+          "Visibility  : "+(data.visibility/1000).toFixed(2)+"Km":null
       }
         
         

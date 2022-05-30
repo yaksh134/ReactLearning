@@ -35,6 +35,8 @@ import { Loading } from './components/Loading';
 import { QueryDemo1 } from './Query/QueryDemo1';
 import { QueryDemo2 } from './Query/QueryDemo2';
 import { Weather } from './components/api/Weather';
+import { StockMarket } from './components/api/StockMarket';
+import { Cricket } from './components/api/Cricket';
 
 
 
@@ -151,6 +153,9 @@ function App() {
         <GetMovies /> */}
 
         <Weather/>
+       
+        <StockMarket/>
+        <Cricket/>
 
         {/* <LocalStorage/> */}
         {/* <FileUpload/> */}
