@@ -37,6 +37,7 @@ import { QueryDemo2 } from './Query/QueryDemo2';
 import { Weather } from './components/api/Weather';
 import { StockMarket } from './components/api/StockMarket';
 import { Cricket } from './components/api/Cricket';
+import { MuiDemo } from './components/MUI/MuiDemo';
 
 
 
@@ -152,10 +153,12 @@ function App() {
         {/* <AddMovies />
         <GetMovies /> */}
 
-        <Weather/>
+        {/* <Weather/>
        
         <StockMarket/>
-        <Cricket/>
+        <Cricket/> */}
+
+        <MuiDemo/>
 
         {/* <LocalStorage/> */}
         {/* <FileUpload/> */}
