@@ -38,6 +38,9 @@ import { Weather } from './components/api/Weather';
 import { StockMarket } from './components/api/StockMarket';
 import { Cricket } from './components/api/Cricket';
 import { MuiDemo } from './components/MUI/MuiDemo';
+import { MuiDemo2 } from './components/MUI/MuiDemo2';
+import { ApiBook } from './components/exam/ApiBook';
+import { DelComp } from './components/exam/DelComp';
 
 
 
@@ -120,6 +123,11 @@ function App() {
 //     })
 // }
 
+  const user = [{"name" : "Yaksh"},
+  {"name":"Vidit"},
+  {"name":"Vraj"}]
+
+
   const [tickets, settickets] = useState([
     {
       name : "Login Bug",
@@ -138,6 +146,8 @@ function App() {
   const addTicket = (ticket)=>{
     settickets([...tickets,ticket])
   }
+
+  const [users, setusers] = useState(user)
 
   const queryClient = new QueryClient()
   return (
@@ -158,7 +168,9 @@ function App() {
         <StockMarket/>
         <Cricket/> */}
 
-        <MuiDemo/>
+        {/* <MuiDemo2/> */}
+        {/* <ApiBook/> */}
+        <DelComp user = {users} newData={setusers}/>
 
         {/* <LocalStorage/> */}
         {/* <FileUpload/> */}
